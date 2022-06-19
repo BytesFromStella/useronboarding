@@ -1,0 +1,53 @@
+{% extends 'layout/base.html' %}
+
+{% block notifications %}
+{% endblock %}
+
+{% block content %}
+    <h2>All users</h2>
+    {% include "table.html" %}
+
+    <section class=pagenavbutton>
+        {% if pagenum >= 1 %}
+        <a class=pagebutton href="?page={{pagenum-1}}">Previous pageee</a>
+        {% endif %}
+        <form>
+            <label for="sortby">Sort by</label><br>
+            <select class="pagenavbutton" id="sortbyField"> <!-- Sorting by ID as default -->
+                <option>--Select--</option>
+                <option value="customerid">ID</option>
+                <option value="groupid">Group ID</option>
+                <option value="firstname">First Name</option>
+                <option value="secondname">Last Name</option>
+                <option value="comment">Comment</option>
+                <!-- I could return the parameter from the URL and put it into the options list -->
+            </select>
+
+            <script>
+                addEventListener("load", () => { // Waits to execute any scripts until page has finished loading
+                    // Page is now loaded and its safe to access DOM elements
+                    const sortField = document.getElementById("sortbyField");
+
+                    function sortGet() {
+                        sortvalue = sortField.value; // gets the value of the field based on the option currently selected
+                        //TODO: append the value from the sort menu into the URL.
+                        var url = new URL(location.href); // gets and sets the current URL into the variable 
+                        var params = new URLSearchParams(url.search); //I was missing .search, so it didn't iterate over exisiting params
+                                                                      // WHAT DOES .search EVEN DO?
+                        params.entries();
+                        params.set("sortby", sortvalue);
+                        params.toString();
+
+                        location.href = "?"+params;
+
+                    }
+
+                    sortField.addEventListener("change", sortGet); // when the user selects something in the sort menu
+                   
+                });
+            </script>
+            
+        </form>
+        <a class=pagebutton href="?page={{pagenum+1}}">Next pageee</a>
+    </section>
+{% endblock %}

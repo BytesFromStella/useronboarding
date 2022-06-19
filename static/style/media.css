@@ -1,0 +1,137 @@
+/* Media tag CSS file. */
+@media screen and (max-width: 1076px){
+	body {
+		/*
+		background-image: url(../images/underwatermobile.png); */
+		background-image: url(../images/abstractmobile.png);
+
+		font-size: 1.5em;
+
+		display: grid;
+		grid-template-areas:
+		'header'
+		'nav'
+		'main'
+		'aside'
+		'section'
+		'footer';
+		grid-template-columns: auto;
+		transition-delay:	0.2s;
+		transition-duration: 0.25s;
+		padding: 0px;
+	}
+
+	header {
+		margin-right: 0px;
+		padding: 1%;
+	}
+
+	h1 {
+		font-size: 1.8em;
+		margin: 1%;
+	}
+
+	h2 {
+		font-size: 1.7em;
+	}
+
+	h3 {
+		font-size: 1.4em;
+	}
+
+	li {
+		font-size: 1.3em;
+	}
+
+	main > div {
+		width: 40%;
+	}
+
+	nav {
+		flex-wrap: wrap;
+	}
+
+	nav > div {
+		width: 49%;
+	}
+
+	input {
+		font-size: 0.8em;
+	}
+
+	label {
+		font-size: 1.3em;
+	}
+
+	button {
+		font-size: 1em;
+	}
+
+	.boxframe {
+		background: url("../images/repeatermobile.png") fixed;
+	}
+
+	.tasklink {
+		font-size: 0.9em;
+	}
+
+	.ytlink {
+		width: 70%;
+		height: 420px;
+	}
+
+	.duhbutton {
+		height: 10%;
+	}
+
+	#logo {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 412px){
+	body {
+		background-image: url(../images/underwatermobile.png);
+		font-size: 2.5em;
+
+		display: grid;
+		grid-template-areas:
+		'header'
+		'nav'
+		'main'
+		'aside'
+		'section'
+		'footer';
+		grid-template-columns: auto;
+		transition-delay:	0.2s;
+		transition-duration: 0.7s;
+	}
+
+	h1, h2, h3 {
+		font-size: 1.4em;
+	}
+	main > div {
+		width: 90%;
+	}
+
+	nav {
+		flex-wrap: wrap;
+	}
+
+	nav > div {
+		width: 32.6%;
+	}
+
+	.boxframe {
+		background-image: url("../images/repeatermobile.png");
+	}
+
+	.tasklink {
+		font-size: 0.8em;
+	}
+
+	.ytlink {
+		width: 70%;
+		height: 160px;
+	}
+}

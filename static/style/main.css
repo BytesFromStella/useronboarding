@@ -1,0 +1,213 @@
+h1 {
+	font-size: 1.9em;
+}
+
+h2 {
+	font-size: 1.6em;
+	text-align: center;
+	font-style: italic;
+}
+
+h3 {
+	font-size: 1.25em;
+}
+
+ul {
+	list-style-type: none;
+	text-align: center;
+	margin-right: 40px;
+}
+
+
+figcaption {
+	font-size: 1.5em;
+	text-shadow: 5px 5px 5px black;
+}
+
+li {
+	text-shadow: black 2px 2px 2px;
+}
+
+li a:visited, a:link {
+	text-decoration: none;
+	color: lightgreen;
+
+}
+
+li a:hover, a:active, a:focus {
+	text-decoration: underline;
+	transition-duration: 0.1s;
+	font-size: 110%;
+	min-width: 30px;
+}
+
+form {
+	font-size: 32px;
+	text-align: center;
+}
+
+input {
+	font-size: 0.8em;
+	text-align: center;
+}
+
+
+body {
+	background: url(../images/abstract.png) fixed;
+	background-position: center;
+    background-size: cover;
+	padding: 28px;
+
+	font-size: 24px;
+	display: grid;
+	gap: 0.5em;	
+}
+
+header {
+	background-image: url("../images/header.jpg");
+}
+
+nav { /* wrapper for nav bar */
+	display: flex;
+	justify-content: center;
+}
+
+
+#widemain {
+	grid-area: aside main;
+}
+main > div{
+	margin: auto;
+	margin-bottom: 24px;
+	margin-top: 24px;
+	width: 25%;
+	height: 20%;
+	min-height: 310px;
+	padding: 2px;
+}
+
+main > div a:visited, a:link {
+	text-decoration: none;
+	color: #3be602;
+}
+
+
+main > div a:hover, a:active, a:focus {
+	text-decoration: underline;
+	transition-duration: 0.2s;
+	font-style: italic;
+}
+
+
+footer {
+	text-align: center;
+	background-image: linear-gradient(to bottom right, white, blue);
+
+	grid-area: footer;
+}
+table, th, td {
+	text-align: center;
+	border: 1px solid;
+	margin: 0.8em;
+}
+
+
+.message {
+	font-style: bold;
+	background-color: gray;
+}
+
+.message.error {
+	background-color: red;
+	
+}
+
+.boxframe {
+	background-image: url("../images/repeater.png");
+	border-style: inset;
+	color: white;
+	text-align: center;
+	display: grid;
+}
+
+nav > div { /* Exception to make divs inside the nav bar apply*/
+	display: flex;
+	width: 100%;
+	margin: 0.1em;
+}
+
+.centered {
+	text-align: center;
+}
+
+.left {
+	float: left;
+	margin-left: 16px;
+}
+
+.links{
+	color: #3be602;
+	text-decoration: underline;
+	transition-duration: 0.3s;
+	font-size: 110%;
+	min-width: 30px;
+}
+
+.links a:visited, a:link{
+	text-decoration: none;
+	color: #3be602;
+}
+
+.links a:hover, a:active, a:focus {
+	text-decoration: underline;
+	color: skyblue;
+}
+
+.tasklink {
+	font-size: 1.3em;
+	font-style: italic;
+}
+
+.ytlink {
+	width: 60%;
+	height: 240px;
+}
+
+.pagebutton {
+	display: block;
+    background: #4E9CAF;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+	border-width: 0.2em;
+	border-style: solid;
+	border-color: black;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+.pagenavbutton {
+	display:flex;
+	gap: 8em;
+    justify-content: center;
+	padding: 1em;
+	text-shadow: 1px 1px 8px #ff0000, 1px 1px 8px black;
+}
+
+
+#duhbutton {
+	width: 240px;
+	height: 40px;
+	font-style: italic;
+	font-size: 18px;
+}
+
+#logo {
+	align-self: auto;
+}
+
+#autobox { /* offset boxes and center text */
+	width: 100%;
+}
+

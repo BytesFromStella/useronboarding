@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Project poopy</title>
+      <link rel="stylesheet" href="{{ url_for('static', filename='style/main.css') }}"/>
+  </head>
+  <body>
+    <header>
+      <div class="boxframe links">
+        <a href="{{ url_for('index') }}"><h1>Home Project:<br> Send and fetch form data with Flask and PostgreSQL</h1></a>
+      </div>
+    </header>
+    <nav>
+      <div class="boxframe">
+      <a class="boxframe links" href="{{ url_for('index')}}">Home</a>
+      </div>
+      <div class="boxframe">
+      <a class="boxframe links" href="{{ url_for('allusers')}}">All users</a>
+      </div>
+      <div class="boxframe">
+      <a class="boxframe links" href="{{ url_for('search')}}">Search</a>
+      </div>
+    </nav>
+    <section class="notifications">
+      <div class="boxframe">
+        {% block notifications %} <!-- TODO: Make this element only show up if it contains any data/response-->
+        {% endblock %}
+      </div>
+    </section>
+    <main>
+      <section class="boxframe">
+        {% block content %}
+        {% endblock %}
+      </section>
+    </main>
+  </body>
+</html>

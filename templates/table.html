@@ -1,0 +1,41 @@
+<div class=boxframe><table>
+    <tbody>
+        <tr>
+            <th>
+                First name
+            </th>
+            <th>
+                Second name
+            </th>
+            <th>
+                Customer ID
+            </th>
+            <th>
+                Group ID
+            </th>
+            <th>
+                Comment
+            </th>
+        </tr>
+    {% for row_item in rows %}
+        <tr>
+            <td>
+              {{ row_item["firstname"] }}
+            </td>
+            <td>
+              {{ row_item["secondname"] }}
+            </td>
+            <td>
+              {{ row_item["customerid"] }}
+            </td>
+            <td>
+              {{ row_item["groupid"] }}
+            </td>
+            <td>
+              {{ row_item["comment"] }}
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</div>

@@ -1,0 +1,191 @@
+h1 {
+	font-size: 2.1em;
+	text-shadow: black 2px 2px 2px;
+}
+
+h2 {
+	font-size: 1.7em;
+	text-align: center;
+	font-style: italic;
+}
+
+h3 {
+	font-size: 1.5em;
+}
+
+h4 {
+	font-size: 1.3em;
+}
+ul {
+	list-style-type: none;
+	text-align: center;
+	margin-right: 40px;
+}
+
+p {
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+figcaption {
+	font-size: 1.5em;
+	text-shadow: 5px 5px 5px black;
+}
+
+li {
+	text-shadow: black 2px 2px 2px;
+}
+
+li a:visited, a:link {
+	text-decoration: none;
+	color: lightgreen;
+
+}
+
+li a:hover, a:active, a:focus {
+	text-decoration: underline;
+	transition-duration: 0.1s;
+	font-size: 110%;
+	min-width: 30px;
+}
+
+body {
+	background: url(../images/abstract.png) fixed;
+	padding: 28px;
+
+	font-size: 24px;
+
+	display: grid;
+	grid-template-areas:
+	'header header header'
+	'nav nav nav'
+	'main main main'
+	'section section section'
+	'footer footer footer';
+	grid-template-columns: auto auto;
+	grid-template-rows: auto;
+	grid-gap: 4px;
+}
+
+header {
+	background-image: url("../images/header.jpg");
+	grid-area: header;
+}
+
+nav { /* wrapper for nav bar */
+	grid-area: nav;
+
+	display: flex;
+
+}
+
+nav > div {
+	width: 25%;
+}
+
+main {
+	grid-area: main;
+}
+
+#widemain {
+	grid-area: aside main;
+}
+
+main > div a:hover, a:active, a:focus {
+	text-decoration: underline;
+}
+
+article {
+	padding: 16px;
+}
+
+section {
+	grid-area: section;
+}
+
+footer {
+	text-align: center;
+	background-image: linear-gradient(to bottom right, white, blue);
+
+	grid-area: footer;
+}
+
+label   {
+	font-size: 32px;
+	font-family: Helvetica, sans-serif;
+	font-weight: bold;
+}
+
+input   {
+	font-size: 28px;
+	font-family: Helvetica, sans-serif;
+	text-align: center;
+}
+
+.boxframe {
+	background-image: url("../images/repeater.png");
+	border-style: inset;
+	color: white;
+	text-align: center;
+}
+
+.centered {
+	text-align: center;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+.links{
+	color: #FF4F65;
+	text-decoration: underline;
+	transition-duration: 0.3s;
+	font-size: 110%;
+	min-width: 30px;
+}
+
+.links a:visited, a:link{
+	text-decoration: none;
+	color: #FF4F65;
+}
+
+.links a:hover, a:active, a:focus {
+	text-decoration: underline;
+	color: skyblue;
+}
+
+.tasklink a:active a:hover {
+	background: skyblue;
+	color: grey;
+}
+
+.ytlink {
+	width: 60%;
+	height: 320px;
+}
+
+.microimg {
+	width: 90%;
+}
+
+#duhbutton {
+	width: 240px;
+	height: 40px;
+	font-style: italic;
+	font-size: 18px;
+}
+
+#autobox { /* offset boxes and center text */
+	width: 100%;
+}
+
+#workmail {
+	color: #000000;
+	font-weight: bold;
+	font-style: italic;
+}

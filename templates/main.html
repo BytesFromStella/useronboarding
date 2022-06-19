@@ -1,0 +1,31 @@
+{% extends 'layout/base.html' %}
+
+{% block notifications %}
+    <h2>Data sent</h2>
+    {% include "table.html" %}
+{% endblock %}
+
+{% block content %}
+    <h2>Input data</h2>
+    <p>
+    <form method="POST" class="form">	
+		<label for="firstName">First name (max 64 letters)</label><br>
+		<input type="text" id="firstName" name="firstName" maxlength="64" placeholder="Text" required></input><br><br>
+		
+		<label for="secondName">Second name (max 64 letters)</label><br>
+		<input type="text" id="secondName" name="secondName" maxlength="64" placeholder="Text" required></input><br><br>
+		
+		<label for="customerID">Customer ID (8 digits) <br> Leave blank for auto</label><br>
+		<input type="number" id="customerID" name="customerID" minlength="8" maxlength="8" placeholder="Number"></input><br><br>
+
+		<label for="groupID">Group ID (12 digits)</label><br>
+		<input type="number" id="groupID" name="groupID" minlength="12" maxlength="12" placeholder="Number" required></input><br><br>
+
+		<label for="comment">Comment (max 64 letters)</label><br>
+		<input type="text" id="comment" name="comment" maxlength="64" placeholder="Text" required></input><br><br>
+
+		<label for="submit">Submit</label><br>
+		<button type="submit">Submit user</button>
+	</form>
+    </p>
+{% endblock %}
