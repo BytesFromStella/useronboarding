@@ -6,9 +6,9 @@ I don't really know how Flask works, but it's not that complicated apparently
 You can use it as a templating engine (like PHP) to inject data into an HTML file. This makes the webpages dynamic (NAV-bar as an example)
 In my case, I am going to point to variables from the Flask-script with tags in the HTML-file.
 
-I don't actually need to know how it works fundamentally, that's probably a waste of time anyway.  
+I don't need to know how it works fundamentally, that would probably take way too long.
 Rather, I can just read the documentation for what I needt to use instead. Like how a parser is written, as an example.
-I have a silly girlfriend to help me understand this stuff if I can't figure it out.
+I have some friends who can help explain things I don't understand along the way.
 
 Here is the data flow of the end-product:
 ![Data flow chart for the project](Information-flow-diagram.png "Data flow chart")
@@ -29,7 +29,7 @@ The password for the admin user is TestTestTest1 and the port number is 5432.
 I called the server "userOnboardingProject"
 
 ## Containerizing
-Now that I'm done with the project (and completely forgot to document), I can containerize the application.
+Now that I'm done with the project (and completely forgot to document along the way. I won't forget this again), I can containerize the application.
 To easily export the dependencies, I used `pip freeze > requirements.txt`
 
 The Dockerfile contains the blueprint to create the containers. Note that the commands are interpereted line-by-line in a sequenced order.
